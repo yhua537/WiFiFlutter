@@ -292,7 +292,7 @@ class WiFiForIoTPlugin {
 
   static Future<bool> removeWifiNetwork(String ssid) async {
     Map<String, String> htArguments = new Map();
-    htArguments["ssid"] = ssid;
+    htArguments["prefix_ssid"] = ssid;
     bool bResult;
     try {
       bResult = await _channel.invokeMethod('removeWifiNetwork', htArguments);
